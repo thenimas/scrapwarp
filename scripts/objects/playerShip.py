@@ -25,8 +25,9 @@ class playerShip(pygame.sprite.Sprite) :
         self.vel = vec(0,0)
         self.acc = vec(0,0)
 
-        self.accVal = 0.15
+        self.accVal = 0.05
         self.decVal = -0.005
+        self.velocityCap = 75
 
 
     def move(self):
@@ -49,6 +50,13 @@ class playerShip(pygame.sprite.Sprite) :
         self.acc.x += self.vel.x * decVal
         self.acc.y += self.vel.y * decVal
         self.vel += self.acc
+
+        # cap velocity
+        if abs(self.vel.x) > self.velocityCap:
+            self.vel.x = (self.vel.x/abs(self.vel.x))*self.velocityCap
+        if abs(self.vel.y) > self.velocityCap:
+            self.vel.y = (self.vel.y/abs(self.vel.y))*self.velocityCap
+
         self.pos += self.vel + 0.5*self.acc
 
         if self.pos.x > globalConfig.WIDTH:

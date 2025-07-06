@@ -6,6 +6,7 @@
 #########################################
 
 import pygame
+import sys
 
 from scripts.objects.config import Config
 from scripts.objects.playerShip import playerShip

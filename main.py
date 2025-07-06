@@ -1,7 +1,7 @@
 #########################################
 # File Name: main.py
 # Description: Main project file for ScrapWarp
-# Author: J. Towns
+# Author: thenimas
 # Date: 2025-07-06
 #########################################
 

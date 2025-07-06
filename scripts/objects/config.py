@@ -1,7 +1,7 @@
 #########################################
 # File Name: config.py
 # Description: Configuration handler script
-# Author: J. Towns
+# Author: thenimas
 # Date: 2025-07-06
 #########################################
 
